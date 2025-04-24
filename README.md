@@ -24,9 +24,32 @@ The dataset includes the following columns:
 >+ Car Details – Models, body styles, transmission types, and prices.
 >+ Sales Data – Number of cars sold, revenue generated, and average sale prices.
 >+ Customer Demographics – Gender and income levels of buyers.
-?+ Time-Based Data – Sales trends by months or years for performance tracking.
+>+ Time-Based Data – Sales trends by months or years for performance tracking.
 
 ## Data Visualization
 [To view the powerbi dashboard, click here](https://ibb.co/0VFGRtk7)
 
+## SQL
+```sql
+SELECT * FROM car_dataset;
+```
 
+```sql
+SELECT DISTINCT model 
+FROM car_dataset;
+```
+
+```sql
+SELECT COUNT(*) AS Total_Cars_Sold 
+FROM car_dataset;
+```
+
+```sql
+SELECT * FROM car_dataset
+WHERE Dealer_Name = "Buddy Storbeck's Diesel Service Inc";
+```
+
+```sql
+SELECT * FROM car_dataset 
+  WHERE Date = '01/02/2022';
+```
