@@ -11,3 +11,22 @@ _The report provide key insights into sales performance, customer demographics, 
 
 ## Data Source:
 + www.kaggle.com
+
+## Tools Used
+### Power BI used for: 
+      1. Data Visualization – Created clear and interactive visuals to display key car sales metrics.
+      2. Data Modeling & DAX – Built relationships and calculated insights using DAX formulas.
+      3. Interactive Reporting – Enabled filters and slicers for dynamic data exploration.
+
+## Data Overview
+The dataset includes the following columns:
+>+ Dealer Information – Names, regions, and performance of car dealers.
+>+ Car Details – Models, body styles, transmission types, and prices.
+>+ Sales Data – Number of cars sold, revenue generated, and average sale prices.
+>+ Customer Demographics – Gender and income levels of buyers.
+?+ Time-Based Data – Sales trends by months or years for performance tracking.
+
+## Data Visualization
+[To view the powerbi dashboard, click here](https://ibb.co/0VFGRtk7)
+
+
