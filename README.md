@@ -33,24 +33,25 @@ The dataset includes the following columns:
 ## Data Visualization
 [To view the powerbi dashboard, click here](https://ibb.co/0VFGRtk7)
 
-[To view the excel dashboard, click here] (https://ibb.co/9kjnn03P)
+[To view the excel dashboard, click here](https://ibb.co/9kjnn03P)
 
 ## SQL
 ```sql
 -- 1. Retrieve all data from table
 SELECT *
- FROM car_dataset;
+FROM car_dataset;
 ```
 
 ```sql
 -- 2. Get all unique car models sold
 SELECT DISTINCT model 
- FROM car_dataset;
+FROM car_dataset;
 ```
 
 ```sql
 -- 3. Find the total number of cars sold
-SELECT COUNT(*) AS Total_Cars_Sold 
+SELECT COUNT(*)
+AS Total_Cars_Sold 
 FROM car_dataset;
 ```
 
@@ -62,41 +63,44 @@ WHERE Dealer_Name = "Buddy Storbeck's Diesel Service Inc";
 
 ```sql
 -- 5. Retrieve all sales from a specific date (e.g., '2024-01-15')
-SELECT * FROM car_dataset 
-  WHERE Date = '01/02/2022';
+SELECT *
+FROM car_dataset 
+WHERE Date = '01/02/2022';
 ```
 
 ```sql
 ---- 6. Find the total revenue generated from car sales
 SELECT SUM(`Price ($)`)
 AS Total_Revenue
-  FROM car_dataset;
+FROM car_dataset;
 ```
 
 ```sql
 -- 7. Count the number of cars sold by each dealer
 SELECT Dealer_Name, COUNT(*) AS Cars_Sold 
-   FROM car_dataset 
-   GROUP BY Dealer_Name ORDER BY Cars_Sold DESC;
+FROM car_dataset 
+GROUP BY Dealer_Name ORDER BY Cars_Sold DESC;
 ```
 
 ```sql
 -- 8. Get the average car price per company
 SELECT Company, round(AVG(`Price ($)`),2) AS Avg_Car_Price 
-  FROM car_dataset 
-  GROUP BY Company ORDER BY Avg_Car_Price DESC;
+FROM car_dataset 
+GROUP BY Company ORDER BY Avg_Car_Price DESC;
 ```
 
 ```sql
 -- 9. Retrieve the most expensive car sold
-SELECT * FROM car_dataset 
-   ORDER BY (`Price ($)`) DESC LIMIT 1;
+SELECT *
+FROM car_dataset 
+ORDER BY (`Price ($)`) DESC LIMIT 1;
 ```
 
 ```sql
 -- 10. Retrieve sales data where the customer has an annual income greater than $100,000
-SELECT * FROM car_dataset 
-   WHERE `Annual Income` > 100000;
+SELECT *
+FROM car_dataset 
+WHERE `Annual Income` > 100000;
 ```
 
 ```sql
@@ -117,17 +121,20 @@ FROM car_dataset GROUP BY Gender;
 -- 13. Find the top 5 most sold car models
 SELECT Model, COUNT(*) AS Cars_Sold 
 FROM car_dataset 
-GROUP BY Model ORDER BY Cars_Sold DESC LIMIT 5;
+GROUP BY Model
+ORDER BY Cars_Sold DESC LIMIT 5;
 ```
 
 ```sql
 -- 14. Find the least expensive car sold
-SELECT * FROM car_dataset 
-  ORDER BY `Price ($)` ASC LIMIT 1;
+SELECT *
+FROM car_dataset 
+ORDER BY `Price ($)` ASC LIMIT 1;
 ```
 
 ```sql
 -- 15. Retrieve all sales for cars of a specific color (e.g., 'White')
-SELECT * FROM car_dataset 
-    WHERE LOWER(Color) = 'black';
+SELECT *
+FROM car_dataset 
+WHERE LOWER(Color) = 'black';
 ```
