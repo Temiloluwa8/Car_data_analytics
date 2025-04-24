@@ -17,6 +17,10 @@ _The report provide key insights into sales performance, customer demographics, 
       1. Data Visualization – Created clear and interactive visuals to display key car sales metrics.
       2. Data Modeling & DAX – Built relationships and calculated insights using DAX formulas.
       3. Interactive Reporting – Enabled filters and slicers for dynamic data exploration.
+### Excel used for :
+      1. Pivot Tables – Summarized large datasets to analyze sales by dealer, region, and model.
+      2. Charts & Graphs – Visualized trends, comparisons, and key metrics like monthly sales and customer breakdown.
+      3. Formulas & Functions – Used Excel functions to calculate totals, averages, and filter data dynamically.
 
 ## Data Overview
 The dataset includes the following columns:
@@ -28,6 +32,7 @@ The dataset includes the following columns:
 
 ## Data Visualization
 [To view the powerbi dashboard, click here](https://ibb.co/0VFGRtk7)
+[To view the excel dashboard, click here] (https://ibb.co/9kjnn03P)
 
 ## SQL
 ```sql
