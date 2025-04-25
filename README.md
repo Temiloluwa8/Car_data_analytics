@@ -35,6 +35,10 @@ The dataset includes the following columns:
 
 [To view the excel dashboard, click here](https://ibb.co/9kjnn03P)
 
+## Dashboard Visuals
+
+
+
 ## SQL
 ```sql
 ## Retrieving all data from table
