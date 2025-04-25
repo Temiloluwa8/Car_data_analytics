@@ -37,6 +37,9 @@ The dataset includes the following columns:
 
 ## Dashboard Visuals
 
+![CAR SALES POWER BI DASHBOARD](https://github.com/user-attachments/assets/ec5bc5c9-9ddd-4af5-99fa-17cb7d6584fb)
+
+![CAR SALES ANALYSIS EXCEL DASHBOARD](https://github.com/user-attachments/assets/de93f49e-99e3-4f53-b11c-6f1ec96d334e)
 
 
 ## SQL
