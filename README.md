@@ -37,47 +37,47 @@ The dataset includes the following columns:
 
 ## SQL
 ```sql
--- 1. Retrieve all data from table
+#### Retrieving all data from table
 SELECT *
 FROM car_dataset;
 ```
 
 ```sql
--- 2. Get all unique car models sold
+#### To get all unique car models sold
 SELECT DISTINCT model 
 FROM car_dataset;
 ```
 
 ```sql
--- 3. Find the total number of cars sold
+#### Finding the total number of cars sold
 SELECT COUNT(*)
 AS Total_Cars_Sold 
 FROM car_dataset;
 ```
 
 ```sql
--- 4. Get all sales made by a specific dealer (e.g., "Buddy Storbeck's Diesel Service Inc")
+#### To get all sales made by a specific dealer (e.g., "Buddy Storbeck's Diesel Service Inc")
 SELECT *
 FROM car_dataset
 WHERE Dealer_Name = "Buddy Storbeck's Diesel Service Inc";
 ```
 
 ```sql
--- 5. Retrieve all sales from a specific date (e.g., '2024-01-15')
+#### Retrieving all sales from a specific date (e.g., '2024-01-15')
 SELECT *
 FROM car_dataset 
 WHERE Date = '01/02/2022';
 ```
 
 ```sql
----- 6. Find the total revenue generated from car sales
+#### Finding the total revenue generated from car sales
 SELECT SUM(`Price ($)`)
 AS Total_Revenue
 FROM car_dataset;
 ```
 
 ```sql
--- 7. Count the number of cars sold by each dealer
+#### Counting the number of cars sold by each dealer
 SELECT Dealer_Name, COUNT(*) AS Cars_Sold 
 FROM car_dataset 
 GROUP BY Dealer_Name
@@ -85,7 +85,7 @@ ORDER BY Cars_Sold DESC;
 ```
 
 ```sql
--- 8. Get the average car price per company
+#### To get the average car price per company
 SELECT Company, round(AVG(`Price ($)`),2) AS Avg_Car_Price 
 FROM car_dataset 
 GROUP BY Company
@@ -93,21 +93,21 @@ ORDER BY Avg_Car_Price DESC;
 ```
 
 ```sql
--- 9. Retrieve the most expensive car sold
+#### Retrieving the most expensive car sold
 SELECT *
 FROM car_dataset 
 ORDER BY (`Price ($)`) DESC LIMIT 1;
 ```
 
 ```sql
--- 10. Retrieve sales data where the customer has an annual income greater than $100,000
+#### Retrieving sales data where the customer has an annual income greater than $100,000
 SELECT *
 FROM car_dataset 
 WHERE `Annual Income` > 100000;
 ```
 
 ```sql
--- 11. Get the number of cars sold by body style
+#### To get the number of cars sold by body style
 SELECT `Body Style`, COUNT(*) AS Cars_Sold 
 FROM car_dataset 
 GROUP BY `Body Style`
@@ -115,14 +115,14 @@ ORDER BY Cars_Sold DESC;
 ```
 
 ```sql
--- 12. Retrieve the number of male and female customers who bought cars
+#### Retrieving the number of male and female customers who bought cars
 SELECT Gender, COUNT(*) AS Customer_Count 
 FROM car_dataset
 GROUP BY Gender;
 ```
 
 ```sql
--- 13. Find the top 5 most sold car models
+#### Finding the top 5 most sold car models
 SELECT Model, COUNT(*) AS Cars_Sold 
 FROM car_dataset 
 GROUP BY Model
@@ -130,14 +130,14 @@ ORDER BY Cars_Sold DESC LIMIT 5;
 ```
 
 ```sql
--- 14. Find the least expensive car sold
+#### Finding the least expensive car sold
 SELECT *
 FROM car_dataset 
 ORDER BY `Price ($)` ASC LIMIT 1;
 ```
 
 ```sql
--- 15. Retrieve all sales for cars of a specific color (e.g., 'White')
+#### Retrieving all sales for cars of a specific color (e.g., 'White')
 SELECT *
 FROM car_dataset 
 WHERE LOWER(Color) = 'black';
