@@ -57,7 +57,8 @@ FROM car_dataset;
 
 ```sql
 -- 4. Get all sales made by a specific dealer (e.g., "Buddy Storbeck's Diesel Service Inc")
-SELECT * FROM car_dataset
+SELECT *
+FROM car_dataset
 WHERE Dealer_Name = "Buddy Storbeck's Diesel Service Inc";
 ```
 
@@ -79,14 +80,16 @@ FROM car_dataset;
 -- 7. Count the number of cars sold by each dealer
 SELECT Dealer_Name, COUNT(*) AS Cars_Sold 
 FROM car_dataset 
-GROUP BY Dealer_Name ORDER BY Cars_Sold DESC;
+GROUP BY Dealer_Name
+ORDER BY Cars_Sold DESC;
 ```
 
 ```sql
 -- 8. Get the average car price per company
 SELECT Company, round(AVG(`Price ($)`),2) AS Avg_Car_Price 
 FROM car_dataset 
-GROUP BY Company ORDER BY Avg_Car_Price DESC;
+GROUP BY Company
+ORDER BY Avg_Car_Price DESC;
 ```
 
 ```sql
@@ -114,7 +117,8 @@ ORDER BY Cars_Sold DESC;
 ```sql
 -- 12. Retrieve the number of male and female customers who bought cars
 SELECT Gender, COUNT(*) AS Customer_Count 
-FROM car_dataset GROUP BY Gender;
+FROM car_dataset
+GROUP BY Gender;
 ```
 
 ```sql
